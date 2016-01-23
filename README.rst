@@ -15,7 +15,7 @@ tontineseed
 
 seed your torrents using a tontine as incentive
 
-* Free software: ISC license
+* Free software: MIT license
 * Documentation: https://tontineseed.readthedocs.org.
 
 Features

@@ -2,12 +2,11 @@
 Credits
 =======
 
-Development Lead
+Developers
 ----------------
-
+* Steve
+* Sean
+* Cyrus
 * Erik Castro <erik@erikcastro.net>
 
-Contributors
-------------
 
-None yet. Why not be the first?

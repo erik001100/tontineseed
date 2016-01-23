@@ -8,7 +8,7 @@ def hello(name):
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
-    return static_file(filepath, root='/tmp/bootstrap')
+    return static_file(filepath, root='/opt/ts/bootstrap')
 
 @route('/')
 def index():

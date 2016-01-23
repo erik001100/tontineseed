@@ -26,7 +26,7 @@ Features
 Instructions
 ------------
 
-* [Setup Python and Virtual Env](http://thinkingnotes.net/setting-up-python.html)
+* [Setup Python and Virtual Env!](http://thinkingnotes.net/setting-up-python.html)
 * Create a virtual environement. In your Projects directory, on command line run "mkvirtualenv tontineseed"
 * clone this repo
 * change directory to repo, run this in command line "ln -s assets/bootstrap/ /tmp/bootstrap"

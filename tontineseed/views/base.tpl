@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
+  <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
   <body>
     <div class="site-wrapper"> 
      <div class="site-wrapper-inner">

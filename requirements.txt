@@ -1,4 +1,3 @@
-Electrum==2.5.4
 Jinja2==2.8
 Markdown==2.6.3
 MarkupSafe==0.23

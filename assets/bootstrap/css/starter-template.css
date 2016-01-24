@@ -91,7 +91,16 @@ body {
   border-bottom-color: #fff;
 }
 
+#navLogo {
+  display: inline;
+}
+
+#main {
+  display: inline;
+}
+
 @media (min-width: 768px) {
+
   .masthead-brand {
     float: left;
   }
@@ -123,12 +132,22 @@ body {
   color: rgba(255,255,255,.5);
 }
 
-
 /*
  * Affix and center
  */
 
+@media (max-width: 768px) {
+  #main {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
+
+  #navLogo {
+    display: none;
+  }
+
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -151,6 +170,7 @@ body {
 }
 
 @media (min-width: 992px) {
+  
   .masthead,
   .mastfoot,
   .cover-container {

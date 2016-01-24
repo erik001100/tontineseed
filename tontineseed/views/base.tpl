@@ -37,12 +37,12 @@
       <div class="cover-container">
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">TorrentSeed<h3>
+            <img  id="navLogo" class="masthead-brand img-responsive" src="https://s3.amazonaws.com/bitbybit/logo-text.png" alt="Bitster">
             <nav>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="active"><a href="#">Features</a></li>
-                <li class="active"><a href="#">Contact</a></li>
+                <li class="active"><a href="/">Home</a></li>
+                <li class=""><a href="/upload">Upload</a></li>
+                <li class=""><a href="#">Contact</a></li>
               </ul>
             </nav>
           </div>

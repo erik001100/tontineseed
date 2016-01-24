@@ -1,8 +1,8 @@
 % rebase('base.tpl', title='HOME PAGE')
 
           <div class="inner cover">
-            <h1 class="cover-heading">BITSTER</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <img class="img-responsive center" id="main" src="https://s3.amazonaws.com/bitbybit/logo.png" alt="Bitster">
+            <h3>The Tonetine App for Seeding Torents</h3>
             <p class="lead">
               <input type="filepicker" data-fp-apikey="AQF8NsUQSuuRArsqUgqxZz"
               onchange="alert(event.fpfile.url)">

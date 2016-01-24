@@ -60,3 +60,6 @@ target/
 
 # Ignore this for mac users
 bin/
+
+# Ignore DS_Store
+.DS_Store

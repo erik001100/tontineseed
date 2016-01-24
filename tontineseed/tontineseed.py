@@ -14,4 +14,11 @@ def server_static(filepath):
 def index():
     return template('index')
 
+@route('/pricefile/<filehash>')
+def pricing(filehash):
+    # use an api to get torrent total size
+    # use an api to get torrent hash
+    filehash = 'cd8158937344b2a066446bed7e7a0c45214f1245'
+    return template('pricing', filehash=filehash)
+
 run(host='localhost', port=8080)

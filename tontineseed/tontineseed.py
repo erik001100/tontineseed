@@ -1,7 +1,15 @@
 # -*- coding: utf-8 -*-
+import pdb
+import os
 
 from bottle import route, run, template, SimpleTemplate, static_file
 from TransmissionClient import NoSuchTorrent, TransmissionClient
+
+# FILE UPLOAD FROM STACK OVERFLOW
+# http://stackoverflow.com/questions/22839474/python-bottle-how-to-upload-media-files-without-dosing-the-server
+
+MAX_SIZE = 10 * 1024 * 1024 # 10MB
+BUF_SIZE = 8192
 
 @route('/hello/<name>')
 def hello(name):
@@ -14,6 +22,38 @@ def server_static(filepath):
 @route('/')
 def index():
     return template('index')
+
+@route('/upload', method='POST')
+def upload():
+    '''Upload function from StackOverflow'''
+    #upload_dir = get_upload_dir_path()
+    upload_dir = '/tmp/torrents/'
+
+    data = request.files.data
+
+    if(data is not None):
+        file = data.file
+        print data.filename, type(file)
+        target_path = os.path.join(upload_dir, data.filename)
+        print target_path
+
+        # add Ron.Rothman's code
+        data_blocks = []
+        buf = data.file.read(8192)
+        while buf:
+            data_blocks.append(buf)
+            buf = data.file.read(8192)
+
+        my_file_data = ''.join(data_blocks)
+
+        with open(target_path, 'wb') as tf:
+            tf.write(my_file_data)
+
+    return None
+
+@route('/sendtorrent', method='GET')
+def upload_form():
+    return template('upload_form')
 
 @route('/pricefile/<filehash>')
 def pricing(filehash):

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pdb
+import os
 from bottle import route, run, template, SimpleTemplate, static_file, request
 
 # FILE UPLOAD FROM STACK OVERFLOW
@@ -26,20 +27,12 @@ def upload():
     #upload_dir = get_upload_dir_path()
     upload_dir = '/tmp/torrents/'
 
-    files = request.files
-    ##files = request.files.get('files')
-    # add this line
-
     data = request.files.data
-    ##data = request.files.data.get('data')
 
-    pdb.set_trace()
-    print files, type(files)
-
-    if(files is not None):
-        file = files.file
-        print file.filename, type(file)
-        target_path = get_next_file_name(os.path.join(upload_dir, file.filename))
+    if(data is not None):
+        file = data.file
+        print data.filename, type(file)
+        target_path = os.path.join(upload_dir, data.filename)
         print target_path
 
         # add Ron.Rothman's code
@@ -50,8 +43,9 @@ def upload():
             buf = data.file.read(8192)
 
         my_file_data = ''.join(data_blocks)
-        # do something with the file data, like write it to target
-        file(target_path,'wb').write(my_file_data)
+
+        with open(target_path, 'wb') as tf:
+            tf.write(my_file_data)
 
     return None
 

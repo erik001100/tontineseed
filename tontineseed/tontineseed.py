@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from bottle import route, run, template, SimpleTemplate, static_file
+from TransmissionClient import NoSuchTorrent, TransmissionClient
 
 @route('/hello/<name>')
 def hello(name):

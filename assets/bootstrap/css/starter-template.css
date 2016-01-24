@@ -123,6 +123,10 @@ body {
   font-weight: bold;
 }
 
+#torrent-upload {
+  display: inline;
+}
+
 .dropzone, .dropzone * {
   box-sizing: border-box; }
 

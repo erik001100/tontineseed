@@ -174,9 +174,13 @@
   box-sizing: border-box; }
 
 .dropzone {
-  min-height: 150px;
+  display: inline-block;
+  height: 300px;
+  width: 300px;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  background: white;
+  border-style: dashed;
+  border-radius: 150px;
+  background: #767171;
   padding: 20px 20px; }
   .dropzone.dz-clic  .dropzone.dz-clic  .dropzone.dz-clic  .dropzone.dz-clic  .dropzone.dz-clic efault; }
     .dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {

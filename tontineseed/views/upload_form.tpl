@@ -4,8 +4,8 @@
             <div id="dropzone">
               <form action="/upload" method="post" class="dropzone needsclick" id="demo-upload">
                 <div class="dz-message needsclick">
-                  Drop files here or click to upload.<br />
-                 <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+                  Drag torrent here.<br />
+                 <span class="note needsclick"><img class="img-responsive center" id="torrent-upload" src="https://s3.amazonaws.com/bitbybit/logo-pig.png" alt="Bitster"></span>
                 </div>
              </form>
             </div>

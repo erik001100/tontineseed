@@ -44,7 +44,6 @@
               <ul class="nav masthead-nav">
                 <li class="active"><a href="/">Home</a></li>
                 <li class=""><a href="/sendtorrent">Upload</a></li>
-                <li class=""><a href="#">Contact</a></li>
               </ul>
             </nav>
           </div>

@@ -1,4 +1,4 @@
-% rebase('base.tpl', title='HOME PAGE')
+% rebase('base.tpl', title='HOME PAGE', active_home=True)
 
           <div class="inner cover">
             <img class="img-responsive center" id="main" src="https://s3.amazonaws.com/bitbybit/logo.png" alt="Bitster">

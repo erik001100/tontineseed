@@ -21,4 +21,8 @@ def pricing(filehash):
     filehash = 'cd8158937344b2a066446bed7e7a0c45214f1245'
     return template('pricing', filehash=filehash)
 
+@route('/upload')
+def upload():
+    return template('upload')
+
 run(host='localhost', port=8080)

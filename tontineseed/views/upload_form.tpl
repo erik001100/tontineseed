@@ -1,10 +1,12 @@
 % rebase('base.tpl', title='HOME PAGE')
 
           <div class="inner cover">
-            <p> Upload torrent here. Max size is 20 MB.</p>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <input type="file" name="data" />
-                <input type="submit" value="Submit">
-            </form>
-          
+            <div id="dropzone">
+              <form action="/upload" method="post" class="dropzone needsclick" id="demo-upload">
+                <div class="dz-message needsclick">
+                  Drop files here or click to upload.<br />
+                 <span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+                </div>
+             </form>
+            </div>
           </div>

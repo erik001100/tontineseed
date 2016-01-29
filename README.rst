@@ -18,6 +18,18 @@ seed your torrents using a tontine as incentive
 * Free software: MIT license
 * Documentation: https://tontineseed.readthedocs.org.
 
+TODO
+----
+
+* Fix installation instructions
+* Setup page to upload torrents
+* Setup pricing function for torrent size
+* Extract hierarchically deterministic Bitcoin address for uploader to send payment to
+* Show page with bitcoin address and price to uploader
+* On payment received, show list of torrent pools
+* etc, much more...
+
+
 Features
 --------
 
@@ -42,6 +54,5 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-This is a paragraph that contains `a link`_.
-.. _Setup Python and Virtualenv: http://thinkingnotes.net/setting-up-python.html
+.. _`Setup Python and Virtualenv`: http://thinkingnotes.net/setting-up-python.html
 

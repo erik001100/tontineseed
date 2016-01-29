@@ -2,7 +2,7 @@
 import pdb
 import os
 
-from bottle import route, run, template, SimpleTemplate, static_file
+from bottle import route, run, template, SimpleTemplate, static_file, request, redirect
 from TransmissionClient import NoSuchTorrent, TransmissionClient
 
 # FILE UPLOAD FROM STACK OVERFLOW

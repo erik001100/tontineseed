@@ -42,7 +42,7 @@
             <img  id="navLogo" class="masthead-brand img-responsive" src="https://s3.amazonaws.com/bitbybit/logo-text.png" alt="Bitster">
             <nav>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="/">Home</a></li>
+                <li class=""><a href="/">Home</a></li>
                 <li class=""><a href="/sendtorrent">Upload</a></li>
               </ul>
             </nav>

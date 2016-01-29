@@ -38,7 +38,7 @@ Features
 Instructions
 ------------
 
-* `Setup Python and Virtual Env`_.
+* `Setup Python and Virtual Environment`_.
 * Create a virtual environement. In your Projects directory, on command line run "mkvirtualenv tontineseed"
 * clone this repo
 * change directory to repo, run this in the command line "pip install -r requirements.txt"
@@ -54,5 +54,5 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-.. _`Setup Python and Virtualenv`: http://thinkingnotes.net/setting-up-python.html
+.. _`Setup Python and Virtual Environment`: http://thinkingnotes.net/setting-up-python.html
 

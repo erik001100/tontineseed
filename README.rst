@@ -29,6 +29,14 @@ TODO
 * On payment received, show list of torrent pools
 * etc, much more...
 
+BRANCHES
+--------
+* master - Plain html mostly. Interaction should be possible via CURL.
+* js - Interaction via Javascript and Dropzone
+
+DEVELOPER HINTS
+---------------
+* `Uploading Files With DropZone JS and Express JS`_
 
 Features
 --------
@@ -55,4 +63,4 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`Setup Python and Virtual Environment`: http://thinkingnotes.net/setting-up-python.html
-
+.. _`Uploading Files With DropZone JS and Express JS`: http://thejackalofjavascript.com/uploading-files-with-dropzone-js-and-express-js/

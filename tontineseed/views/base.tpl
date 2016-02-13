@@ -11,6 +11,10 @@
 
     <title>{{title or 'No title'}}</title>
 
+    <!-- Dropzone JS -->
+    <script src="/static/js/dropzone.js"></script>
+    <script src="/static/js/app.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
@@ -64,7 +68,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/dropzone.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>

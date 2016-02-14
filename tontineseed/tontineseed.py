@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pdb
 import os
-
+import hashlib
 from bottle import route, run, template, SimpleTemplate, static_file, request, redirect
 #from TransmissionClient import NoSuchTorrent, TransmissionClient
 
@@ -26,36 +26,47 @@ def index():
 @route('/upload', method='POST')
 def upload():
     '''Upload function from StackOverflow'''
-    #upload_dir = get_upload_dir_path()
+    
+    # Move to config file
     upload_dir = '/tmp/torrents/'
 
-    #pdb.set_trace()
-    
+    #hash file being uploaded
+    h = hashlib.new('sha1')
+
     files = request.files
     print files, type(files)
-    #data = request.files.data
+    data = request.files.data
 
-    if(files is not None):
-        uploadfile = files.file
+    if(data is not None):
+        fileinfo = {}
+        uploadfile = data
+        #pdb.set_trace()
         print uploadfile.filename, type(uploadfile)
+        fileinfo['name'] = uploadfile.filename
         target_path = os.path.join(upload_dir, uploadfile.filename)
         print target_path
 
-        #pdb.set_trace()
         # add Ron.Rothman's code
+        # hash file as being read
         data_blocks = []
         buf = uploadfile.file.read(8192)
+        h.update(buf)
         while buf:
             data_blocks.append(buf)
             buf = uploadfile.file.read(8192)
+            h.update(buf)
 
+        fileinfo['hash'] = h.hexdigest()
         my_file_data = ''.join(data_blocks)
 
         with open(target_path, 'wb') as tf:
             tf.write(my_file_data)
+            fileinfo['size'] = tf.tell()
 
-    print "time to redirect"
-    redirect('/pricefile/myhash')
+        # write data to server db
+        # write filename, hash, size, generated address for payment, datetime, calculateprice
+
+    redirect('/pricefile/{0}'.format(fileinfo['hash']))
     return None
 
 @route('/sendtorrent', method='GET')
@@ -64,9 +75,9 @@ def upload_form():
 
 @route('/pricefile/<filehash>')
 def pricing(filehash):
-    # use an api to get torrent total size
-    # use an api to get torrent hash
-    filehash = 'cd8158937344b2a066446bed7e7a0c45214f1245'
+    # get info from db to display here
+    # generate qr code for address
+
     return template('pricing', filehash=filehash)
 
 

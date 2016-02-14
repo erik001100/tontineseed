@@ -1,12 +1,18 @@
 % rebase('base.tpl', title='HOME PAGE')
 
           <div class="inner cover">
-            <div id="dropzone">
-              <form action="/upload" method="post" class="dropzone needsclick" id="my-upload">
-                <div class="dz-message needsclick">
-                  Drag torrent here.<br />
-                 <span class="note needsclick"><img class="img-responsive center" id="torrent-upload" src="https://s3.amazonaws.com/bitbybit/logo-pig.png" alt="Bitster"></span>
-                </div>
+            <div id="uploadform">
+             <form action="/upload" method="post" enctype="multipart/form-data" class="upload form" id="my-upload">
+                 <fieldset>
+                    <legend>Torrent Information:</legend>
+                    Short Description:<br>
+                    <input type="text" name="description" size=40 value="Mouse"><br><br>
+                    
+                    Please specify a file, or a set of files:<br>
+                    <input type="file" name="data" size="40">
+                    
+                    <input type="submit" value="Submit">
+                 </fieldset>
              </form>
             </div>
             <a href="/pricefile/jhsjhkskjswwww">Data File</a>
